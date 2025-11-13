@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "john",
+      "email": "john@kiet.edu"
+    },
+    {
+      "id": "2",
+      "name": "ravi",
+      "email": "ravi@kiet.edu"
+    },
+    {
+      "id": "3",
+      "name": "Sanjay",
+      "email": "sanjay@kiet.edu"
+    },
+    {
+      "id": "4",
+      "name": "user4",
+      "email": "user4@kiet.edu"
+    },
+    {
+      "id": "5",
+      "name": "user5",
+      "email": "user5@kiet.edu"
+    }
+  ]
+}
