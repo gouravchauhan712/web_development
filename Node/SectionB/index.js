@@ -1,7 +1,15 @@
 const express = require("express");
 const app = express();
 const auth = require("./auth/login");
-
+const filter = (req,res,next)=>{
+    if(!req.query.user){
+        console.log("this is not valid");
+    }
+    else{
+        next();
+    }
+}
+app.use(filter);
 app.use("/user", auth);
 
 app.get("/", (req, res) => {
