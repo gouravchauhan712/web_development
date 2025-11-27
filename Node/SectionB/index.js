@@ -1,24 +1,16 @@
 const express = require("express");
 const app = express();
-const path = require("path");
-const public = path.join(__dirname,"/public");
+const auth = require("./auth/login");
 
-app.get("/",(req,res)=>{
-    res.send("<h2>Welcome to express JS</h2>");
+app.use("/user", auth);
 
-})
+app.get("/", (req, res) => {
+    res.send("welcome to the Advance routing in node js");
+});
 
-app.get("/about",(req,res)=>{
-    res.send("{message:This is about my page}");
-})
-
-app.get("/htmlFile",(req,res)=>{
-    res.sendFile(`${public}/mypage.html`);
-})
-app.listen(3000,(error)=>{
-    if(error){
-        console.log(error)
+app.listen(3000, (error) => {
+    if (error) {
+        console.log(error);
     }
-    console.log("Express server runniong on port http://localhost:3000");
-
-})
+    console.log("Running on http://localhost:3000");
+});
